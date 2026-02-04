@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Evil Village - Официальный сайт</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="images/icons8-umbrella-corporation-16.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Old+Standard+TT:wght@400;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Old Standard TT', serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Стили для шапки */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background-color: rgba(10, 10, 10, 0.85);
+            border-bottom: 1px solid #3a4a5a;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #e6f7ff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #a0c0d0;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: #c0c0c0;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: #e6f7ff;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #e6f7ff;
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Общие стили для секций */
+        section {
+            padding: 100px 40px;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 36px;
+            color: #e6f7ff;
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: #e6f7ff;
+        }
+
+        /* Первый экран - главный */
+        .hero {
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url("images/загруженное\ -\ 2026-02-04T175101.073.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding-top: 100px;
+            margin-bottom: 120px;
+        }
+
+        .main-title {
+            font-family: 'Cinzel', serif;
+            font-size: 120px;
+            color: #e6f7ff;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+            position: relative;
+            animation: flicker 3s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; text-shadow: 3px 3px 10px rgba(230, 247, 255, 0.7); }
+        }
+
+        .main-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 3px;
+            background-color: #e6f7ff;
+        }
+
+        .subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 48px;
+            color: #a0c0d0;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+
+        .slogan {
+            font-size: 24px;
+            color: #c0c0c0;
+            margin-bottom: 40px;
+            font-style: italic;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-decoration: none;
+            margin-bottom: 40px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .download-btn:hover {
+            background: rgba(230, 247, 255, 0.1);
+            border-color: #e6f7ff;
+            color: #e6f7ff;
+            transform: translateY(-3px);
+        }
+
+        .partners {
+            margin-top: 10px;
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
+
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .partner-logos img {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+
+        .partner-logos img:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
+        /* Второй экран - герой */
+        .character-section {
+            background-color: #111;
+            background-image: url('images/Ethan\ Winter’s\ house.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .character-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .character-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .character-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .character-image img {
+            max-width: 100%;
+            height: 600px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(230, 247, 255, 0.3));
+        }
+
+        .character-info {
+            flex: 1;
+            padding: 0 40px;
+        }
+
+        .character-name {
+            font-family: 'Cinzel', serif;
+            font-size: 48px;
+            color: #e6f7ff;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        .character-description {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #c0c0c0;
+            margin-bottom: 30px;
+        }
+
+        .character-feature {
+            background-color: rgba(26, 26, 26, 0.8);
+            padding: 25px;
+            border-left: 4px solid #e6f7ff;
+            margin-top: 40px;
+        }
+
+        .character-feature h3 {
+            font-family: 'Cinzel', serif;
+            color: #e6f7ff;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .character-feature p {
+            font-size: 16px;
+            color: #a0a0a0;
+        }
+
+        /* Третий экран - оружие */
+        .weapons-section {
+            background-color: #0f0f0f;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .weapons-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .weapons-slider {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .slider-container {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            border: 2px solid #3a4a5a;
+            box-shadow: 0 0 20px rgba(230, 247, 255, 0.1);
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            background-color: rgba(20, 20, 20, 0.9);
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .weapon-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .weapon-image img {
+            max-width: 100%;
+            height: 350px;
+            object-fit: contain;
+        }
+
+        .weapon-info {
+            flex: 1;
+            padding: 0 40px;
+        }
+
+        .weapon-name {
+            font-family: 'Cinzel', serif;
+            font-size: 36px;
+            color: #e6f7ff;
+            margin-bottom: 20px;
+        }
+
+        .weapon-description {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #c0c0c0;
+        }
+
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .slider-nav button {
+            background: transparent;
+            border: 2px solid #3a4a5a;
+            color: #c0c0c0;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .slider-nav button:hover {
+            border-color: #e6f7ff;
+            color: #e6f7ff;
+        }
+
+        /* Четвертый экран - издания */
+        .editions-section {
+            background-color: #111;
+            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .editions-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+        }
+
+        .editions-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .edition-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            background-color: rgba(26, 26, 26, 0.9);
+            border: 2px solid #3a4a5a;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+
+        .edition-card:hover {
+            border-color: #e6f7ff;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(230, 247, 255, 0.1);
+        }
+
+        .edition-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .edition-image img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 1px solid #444;
+        }
+
+        .edition-title {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            color: #e6f7ff;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .edition-features {
+            list-style-type: none;
+            margin-bottom: 25px;
+        }
+
+        .edition-features li {
+            color: #c0c0c0;
+            padding: 8px 0;
+            border-bottom: 1px solid #3a4a5a;
+        }
+
+        .edition-features li:last-child {
+            border-bottom: none;
+        }
+
+        .edition-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #2a3a4a;
+            color: #c0c0c0;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .edition-btn:hover {
+            background-color: #3a4a5a;
+            color: #e6f7ff;
+        }
+
+        /* Пятый экран - враги */
+        .enemies-section {
+            background-color: #0f0f0f;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enemies-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .enemies-slider {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .enemy-slide {
+            display: none;
+            align-items: center;
+            background-color: rgba(20, 20, 20, 0.9);
+            border: 2px solid #3a4a5a;
+            padding: 30px;
+        }
+
+        .enemy-slide.active {
+            display: flex;
+        }
+
+        .enemy-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .enemy-image img {
+            max-width: 100%;
+            height: 400px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 15px rgba(230, 247, 255, 0.2));
+        }
+
+        .enemy-info {
+            flex: 1;
+            padding: 0 40px;
+        }
+
+        .enemy-name {
+            font-family: 'Cinzel', serif;
+            font-size: 42px;
+            color: #e6f7ff;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .enemy-description {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #c0c0c0;
+        }
+
+        .enemy-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .enemy-dot {
+            width: 15px;
+            height: 15px;
+            background-color: #3a4a5a;
+            border-radius: 50%;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .enemy-dot.active {
+            background-color: #e6f7ff;
+            transform: scale(1.2);
+        }
+
+        /* Футер */
+        footer {
+            background-color: #080808;
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #3a4a5a;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            color: #e6f7ff;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 1100px) {
+            .character-container {
+                flex-direction: column;
+            }
+            
+            .character-info {
+                margin-top: 40px;
+            }
+            
+            .slide {
+                flex-direction: column;
+                padding: 40px 20px;
+                height: auto;
+            }
+            
+            .weapon-info {
+                margin-top: 30px;
+                padding: 0;
+            }
+            
+            .enemy-slide {
+                flex-direction: column;
+            }
+            
+            .enemy-info {
+                margin-top: 30px;
+                padding: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 15px;
+            }
+            
+            .main-title {
+                font-size: 60px;
+                letter-spacing: 5px;
+            }
+            
+            .subtitle {
+                font-size: 30px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            section {
+                padding: 80px 20px;
+            }
+            
+            .editions-container {
+                gap: 20px;
+            }
+            
+            .hero-content {
+                margin-bottom: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="logo">RESIDENT EVIL <span>VILLAGE</span></div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Главная</a></li>
+                <li><a href="#characters">Герои</a></li>
+                <li><a href="#weapons">Оружие</a></li>
+                <li><a href="#editions">Версии</a></li>
+
+                <li><a href="#enemies">Враги</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Главный экран -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="main-title">VILLAGE</h1>
+            <h2 class="subtitle">RESIDENT EVIL</h2>
+            <p class="slogan">Выживи в кошмаре, где страх стал реальностью</p>
+            <a href="#" class="download-btn">Скачать сейчас</a>
+        </div>
+        
+        <div class="partners">
+            <h3>Партнеры</h3>
+            <div class="partner-logos">
+                <img src="images/загруженное - 2026-02-04T183952.016-Photoroom.png" alt="PlayStation" height="40px">
+                <img src="images/загруженное - 2026-02-04T184001.693-Photoroom.png" alt="Xbox" height="40px">
+                <img src="images/Steam-Photoroom.png" alt="Steam" height="60px">
+                <img src="images/Hello Windows Insiders! We are preparing the Windows 10 May 2021 Update (version 21H1) for release_ We believe that-Photoroom.png" alt="Windows" height="60px">
+            </div>
+        </div>
+    </section>
+
+    <!-- Второй экран - Герой -->
+    <section id="characters" class="character-section">
+        <h2 class="section-title">Герои</h2>
+        <div class="character-container">
+            <div class="character-image">
+                <img src="images/загруженное - 2026-02-04T181216.646-Photoroom.png" alt="Итан Уинтерс">
+            </div>
+            <div class="character-info">
+                <h3 class="character-name">Итан Уинтерс</h3>
+                <p class="character-description">
+                    Итан Уинтерс - обычный человек, оказавшийся в самом центре кошмара. После ужасных событий в Луизиане он с женой Мией пытается начать новую жизнь в Европе. Однако его мир вновь рушится, когда его дочь похищают, а сам он оказывается в загадочной зимней деревне, населенной чудовищными созданиями и могущественными лордами.
+                </p>
+                <p class="character-description">
+                    Несмотря на отсутствие специальной подготовки, Итан демонстрирует невероятную стойкость и решимость в поисках своей дочери. Он готов пройти через любые испытания, чтобы спасти свою семью от ужасов, скрывающихся в заснеженной деревне.
+                </p>
+                <div class="character-feature">
+                    <h3>Интересный факт</h3>
+                    <p>Итан - первый протагонист в основной серии Resident Evil, чье лицо практически не показывается в течение всей игры. Это сознательный дизайнерский выбор, позволяющий игрокам лучше отождествлять себя с персонажем.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Третий экран - Оружие -->
+    <section id="weapons" class="weapons-section">
+        <h2 class="section-title">Оружие</h2>
+        <div class="weapons-slider">
+            <div class="slider-container">
+                <!-- Слайд 1 -->
+                <div class="slide active">
+                    <div class="weapon-image">
+                        <img src="images/Police Upper Dublin Resident Lost Her Gun While Jogging ❤ liked on Polyvore featuring shoes and jogging shoes-Photoroom.png" alt="Пистолет LEMI">
+                    </div>
+                    <div class="weapon-info">
+                        <h3 class="weapon-name">Пистолет LEMI</h3>
+                        <p class="weapon-description">
+                            Стандартный пистолет, который Итан находит в начале своего пути. Имеет умеренную урон и скорострельность. Может быть модернизирован для увеличения урона, емкости магазина и скорости перезарядки. Идеально подходит для борьбы со слабыми противниками и экономии патронов для более мощного оружия.
+                        </p>
+                    </div>
+                </div>
+                <!-- Слайд 2 -->
+                <div class="slide">
+                    <div class="weapon-image">
+                        <img src="images/загруженное - 2026-02-04T182208.393-Photoroom.png" alt="Волкобой M1851">
+                    </div>
+                    <div class="weapon-info">
+                        <h3 class="weapon-name">Волкобой M1851</h3>
+                        <p class="weapon-description">
+                            Мощный револьвер, который становится доступен в середине игры. Наносит огромный урон, особенно эффективен против сильных врагов и боссов. Использует редкие патроны калибра .44, поэтому важно использовать его с умом. Может быть модернизирован для максимального урона.
+                        </p>
+                    </div>
+                </div>
+                <!-- Слайд 3 -->
+                <div class="slide">
+                    <div class="weapon-image">
+                        <img src="images/e7134dd7502921adc89d6156ab679c8f-Photoroom.png" alt="Дробовик W870 TAC">
+                    </div>
+                    <div class="weapon-info">
+                        <h3 class="weapon-name">Дробовик W870 TAC</h3>
+                        <p class="weapon-description">
+                            Надежный помповый дробовик, который становится незаменимым оружием в ближнем бою. Обладает огромной stopping power, способен отбрасывать противников и наносить значительный урон на короткой дистанции. Особенно эффективен против зомби-подобных врагов и чудовищ, которые атакуют с близкого расстояния.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button id="prev-weapon">← Назад</button>
+                <button id="next-weapon">Вперёд →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Четвертый экран - Издания игры -->
+    <section id="editions" class="editions-section">
+        <h2 class="section-title">Версии игры</h2>
+        <div class="editions-container">
+            <!-- Издание 1 -->
+            <div class="edition-card">
+                <div class="edition-image">
+                    <img src="images/загруженное - 2026-02-04T183639.557.jpeg" alt="Стандартное издание">
+                </div>
+                <h3 class="edition-title">Стандартное издание</h3>
+                <ul class="edition-features">
+                    <li>Полная версия игры Resident Evil Village</li>
+                    <li>Доступ ко всем основным локациям</li>
+                    <li>Режим "The Mercenaries"</li>
+                    <li>Коллекция концепт-артов</li>
+                    <li>Коллекция концепт-артов</li>
+                </ul>
+                <a href="#" class="edition-btn">Установить</a>
+            </div>
+            <!-- Издание 2 -->
+            <div class="edition-card">
+                <div class="edition-image">
+                    <img src="images/Resident Evil Village poster.jpeg" alt="Deluxe издание">
+                </div>
+                <h3 class="edition-title">Deluxe издание</h3>
+                <ul class="edition-features">
+                    <li>Всё из стандартного издания</li>
+                    <li>Набор "Трагедия Итана Уинтерса"</li>
+                    <li>Набор "Выживание" с полезными предметами</li>
+                    <li>Эксклюзивные обложки оружия</li>
+                    <li>Саундтрек в цифровом формате</li>
+                </ul>
+                <a href="#" class="edition-btn">Установить</a>
+            </div>
+            <!-- Издание 3 -->
+            <div class="edition-card">
+                <div class="edition-image">
+                    <img src="images/загруженное - 2026-02-04T183609.678.jpeg" alt="Коллекционное издание">
+                </div>
+                <h3 class="edition-title">Коллекционное издание</h3>
+                <ul class="edition-features">
+                    <li>Всё из Deluxe издания</li>
+                    <li>Фигурка Криса Редфилда высотой 25 см</li>
+                    <li>Артбук на 64 страницы</li>
+                    <li>Стальная коробка для игры</li>
+                    <li>Карта деревни на холсте</li>
+                </ul>
+                <a href="#" class="edition-btn">Установить</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Пятый экран - Враги -->
+    <section id="enemies" class="enemies-section">
+        <h2 class="section-title">Враги</h2>
+        <div class="enemies-slider">
+            <!-- Слайд 1 -->
+            <div class="enemy-slide active">
+                <div class="enemy-image">
+                    <img src="images/Heisenberg.jpeg" alt="Карл Хейзенберг">
+                </div>
+                <div class="enemy-info">
+                    <h3 class="enemy-name">Карл Хейзенберг</h3>
+                    <p class="enemy-description">
+                        Один из четырех лордов, подчиняющихся Матери Миранде. Хейзенберг контролирует фабрику и обладает способностью управлять магнитными полями и металлами. В отличие от других лордов, он открыто выражает недовольство властью Миранды и предлагает Итану объединиться против неё. Хейзенберг носит характерные очки и шляпу, а его тело усилено металлическими имплантами.
+                    </p>
+                </div>
+            </div>
+            <!-- Слайд 2 -->
+            <div class="enemy-slide">
+                <div class="enemy-image">
+                    <img src="images/✧.jpeg" alt="Матерь Миранда">
+                </div>
+                <div class="enemy-info">
+                    <h3 class="enemy-name">Матерь Миранда</h3>
+                    <p class="enemy-description">
+                        Главный антагонист Resident Evil Village. Миранда - древнее существо, обладающее способностью изменять свою внешность и контролировать мегамицет - грибковый организм, который лежит в основе всех мутаций в деревне. Она рассматривает жителей деревни как подопытных в своих экспериментах по воскрешению умершей дочери. Её способности делают её одним из самых опасных противников в истории серии.
+                    </p>
+                </div>
+            </div>
+            <!-- Слайд 3 -->
+            <div class="enemy-slide">
+                <div class="enemy-image">
+                    <img src="images/загруженное - 2026-02-04T175231.623.jpeg" alt="Альчина Димитреску">
+                </div>
+                <div class="enemy-info">
+                    <h3 class="enemy-name">Альчина Димитреску</h3>
+                    <p class="enemy-description">
+                        Самая известная из лордов, управляющая замком Димитреску. Аристократка ростом более 2,9 метров, которая вместе со своими тремя дочерями терроризирует окрестности. Обладает способностью превращаться в драконоподобное существо с огромными когтями. Её дочери - Бэла, Кассандра и Даниэла - также представляют серьезную угрозу, способные превращаться в стаи насекомых.
+                    </p>
+                </div>
+            </div>
+            <!-- Навигация -->
+            <div class="enemy-nav">
+                <div class="enemy-dot active" data-slide="0"></div>
+                <div class="enemy-dot" data-slide="1"></div>
+                <div class="enemy-dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-logo">RESIDENT EVIL VILLAGE</div>
+        <p class="copyright">© 2023 CAPCOM CO., LTD. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        // Слайдер оружия
+        const weaponSlides = document.querySelectorAll('.weapons-slider .slide');
+        const prevWeaponBtn = document.getElementById('prev-weapon');
+        const nextWeaponBtn = document.getElementById('next-weapon');
+        let currentWeaponSlide = 0;
+
+        function showWeaponSlide(index) {
+            // Скрываем все слайды
+            weaponSlides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Показываем нужный слайд
+            weaponSlides[index].classList.add('active');
+            currentWeaponSlide = index;
+        }
+
+        // Следующий слайд
+        nextWeaponBtn.addEventListener('click', () => {
+            let nextSlide = currentWeaponSlide + 1;
+            if (nextSlide >= weaponSlides.length) {
+                nextSlide = 0;
+            }
+            showWeaponSlide(nextSlide);
+        });
+
+        // Предыдущий слайд
+        prevWeaponBtn.addEventListener('click', () => {
+            let prevSlide = currentWeaponSlide - 1;
+            if (prevSlide < 0) {
+                prevSlide = weaponSlides.length - 1;
+            }
+            showWeaponSlide(prevSlide);
+        });
+
+        // Автопереключение слайдов оружия
+        setInterval(() => {
+            let nextSlide = currentWeaponSlide + 1;
+            if (nextSlide >= weaponSlides.length) {
+                nextSlide = 0;
+            }
+            showWeaponSlide(nextSlide);
+        }, 5000);
+
+        // Слайдер врагов
+        const enemySlides = document.querySelectorAll('.enemies-slider .enemy-slide');
+        const enemyDots = document.querySelectorAll('.enemies-slider .enemy-dot');
+        
+        function showEnemySlide(index) {
+            // Скрываем все слайды
+            enemySlides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Убираем активный класс со всех точек
+            enemyDots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Показываем нужный слайд и активируем соответствующую точку
+            enemySlides[index].classList.add('active');
+            enemyDots[index].classList.add('active');
+        }
+
+        // Добавляем обработчики событий для точек
+        enemyDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const slideIndex = parseInt(dot.getAttribute('data-slide'));
+                showEnemySlide(slideIndex);
+            });
+        });
+
+        // Автопереключение слайдов врагов
+        let currentEnemySlide = 0;
+        setInterval(() => {
+            currentEnemySlide++;
+            if (currentEnemySlide >= enemySlides.length) {
+                currentEnemySlide = 0;
+            }
+            showEnemySlide(currentEnemySlide);
+        }, 6000);
+
+        // Плавная прокрутка для меню
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Эффект для кнопок установки
+        document.querySelectorAll('.edition-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Функция установки будет доступна после выхода игры!');
+            });
+        });
+
+        // Эффект для кнопки скачивания
+        document.querySelector('.download-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Начинается загрузка демо-версии игры...');
+        });
+    </script>
+</body>
+</html>
